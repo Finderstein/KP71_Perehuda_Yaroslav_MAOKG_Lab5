@@ -108,13 +108,13 @@ public class Froggy extends JFrame {
         Texture texture = textureLoader.getTexture();
         texture.setBoundaryModeS(Texture.WRAP);
         texture.setBoundaryModeT(Texture.WRAP);
-        texture.setBoundaryColor(new Color4f(0.0f, 1.0f, 0.0f, 0.0f));
+        texture.setBoundaryColor(new Color4f(12.0f, 5.0f, 0.0f, 0.0f));
         return texture;
     }
 
     Material getMaterial() {
         Material material = new Material();
-        material.setAmbientColor(new Color3f(0.9f, 0.9f, 0.0f));
+        material.setAmbientColor(new Color3f(0.2f, 0.2f, 0.0f));
         material.setDiffuseColor(new Color3f(1f, 1f, 1f));
         material.setSpecularColor(new Color3f(1f, 1f, 1f));
         material.setShininess(0.3f);
