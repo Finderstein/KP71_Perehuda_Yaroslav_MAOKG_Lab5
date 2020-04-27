@@ -34,7 +34,7 @@ public class Froggy extends JFrame {
         configureCanvas();
         configureUniverse();
         addModelToUniverse();
-        setDuckElementsList();
+        setFroggyElementsList();
         addAppearance();
         addImageBackground();
         addLightToUniverse();
@@ -45,7 +45,7 @@ public class Froggy extends JFrame {
     }
 
     private void configureWindow() {
-        setTitle("Duck Animation");
+        setTitle("Froggy Animation");
         setSize(760, 640);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -82,7 +82,7 @@ public class Froggy extends JFrame {
         }
     }
 
-    private void setDuckElementsList() {
+    private void setFroggyElementsList() {
         nameMap = scene.getNamedObjects();
         //Print elements of your model:
         printModelElementsList(nameMap);
@@ -123,14 +123,14 @@ public class Froggy extends JFrame {
     }
 
     private void addAppearance() {
-        Appearance duckAppearance = new Appearance();
-        duckAppearance.setTexture(getTexture("src/source_folder/skin.jpg"));
+        Appearance froggyAppearance = new Appearance();
+        froggyAppearance.setTexture(getTexture("src/source_folder/skin.jpg"));
         TextureAttributes texAttr = new TextureAttributes();
         texAttr.setTextureMode(TextureAttributes.COMBINE);
-        duckAppearance.setTextureAttributes(texAttr);
-        duckAppearance.setMaterial(getMaterial());
-        Shape3D duck = nameMap.get("object");
-        duck.setAppearance(duckAppearance);
+        froggyAppearance.setTextureAttributes(texAttr);
+        froggyAppearance.setMaterial(getMaterial());
+        Shape3D froggy = nameMap.get("object");
+        froggy.setAppearance(froggyAppearance);
     }
 
     private void addImageBackground() {
